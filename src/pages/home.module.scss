@@ -1,1 +1,51 @@
+.container {
+    width: 610px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
 
+}
+
+.posts {
+   padding: 10px;  
+
+   & strong{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+
+    color: #F8F8F8;
+   }
+
+   & p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 10px;
+    color: #D7D7D7;
+
+   }
+}
+
+.rowDate {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.rowIcon{
+    display: flex;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #BBBBBB;
+}

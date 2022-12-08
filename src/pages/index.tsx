@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { RichText } from 'prismic-dom';
+import { AiOutlineCalendar, AiOutlineUser } from 'react-icons/ai';
 
 import { getPrismicClient } from '../services/prismic';
 
@@ -52,7 +53,25 @@ export default function Home(props: HomeProps): JSX.Element {
                 <a>
                   <strong>{i.data.title}</strong>
                   <p>{i.data.content[0].text || ''}</p>
-                  <time>{i.first_publication_date}</time>
+
+                  <div className={styles.rowDate}>
+                    <div className={styles.rowIcon}>
+                      <AiOutlineCalendar
+                        style={{ marginRight: 7 }}
+                        size={20}
+                        color="#BBBBBB"
+                      />
+                      <time>{i.first_publication_date}</time>
+                    </div>
+                    <div className={styles.rowIcon}>
+                      <AiOutlineUser
+                        color="#BBBBBB"
+                        style={{ marginRight: 7, marginLeft: 7 }}
+                        size={20}
+                      />
+                      {i.data.author}
+                    </div>
+                  </div>
                 </a>
               </Link>
             );
